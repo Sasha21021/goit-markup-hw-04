@@ -344,10 +344,6 @@ button {
   padding: 120px 0 120px 0;
 }
 
-.container {
-  overflow: hidden;
-}
-
 .portfolio-title {
   font-weight: 700;
   font-size: 36px;
@@ -373,13 +369,14 @@ button {
 
 .portfolio-block {
   position: relative;
+  overflow: hidden;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-block:hover .overlay {
   opacity: 1;
   transform: translateY(0);
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .overlay {
@@ -435,6 +432,11 @@ button {
   display: flex;
 }
 
+.container-logo {
+  align-items: baseline;
+  margin-right: 120px;
+}
+
 .page-footer {
   background-color: #2e2f42;
   padding: 100px 0 100px;
@@ -460,7 +462,6 @@ button {
 
 .footer-container-social {
   margin-left: 120px;
-  margin-right: 120px
   align-items: baseline;
 }
 
@@ -478,7 +479,6 @@ button {
   align-items: center;
   justify-content: center;
   gap: 16px;
-
 }
 
 .icon-footer {
@@ -486,7 +486,7 @@ button {
 }
 
 .icon-lin-footer {
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 40px;
   height: 40px;
   display: flex;
