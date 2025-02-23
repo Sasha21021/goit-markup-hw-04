@@ -310,8 +310,7 @@ button {
   justify-content: center;
   margin-top: 8px;
 }
-.icon-item {
-}
+
 .icon-lin {
   width: 40px;
   height: 40px;
@@ -321,10 +320,16 @@ button {
   border-radius: 50%;
   background-color: blue;
 }
+
+.icon-lin:hover,
+.icon-lin:focus {
+  background-color: #404bbf;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .icon {
   fill: white;
-  width: 16px;
-  height: 16px;
 }
 
 /* #endregion our team */
@@ -357,6 +362,34 @@ button {
   width: calc((100% - 48px) / 3);
 }
 
+.portfolio-block {
+  position: relative;
+}
+
+.portfolio-block:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.overlay {
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  color: #f4f4fd;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  transform: translateX(100%);
+  opacity: 0;
+  overflow: hidden;
+}
+
 .portfolio-img {
   display: block;
   max-width: 100%;
@@ -387,6 +420,11 @@ button {
 /* #endregion portfolio */
 
 /* #region footer */
+
+.footer-container {
+  display: flex;
+}
+
 .page-footer {
   background-color: #2e2f42;
   padding: 100px 0 100px;
@@ -409,4 +447,46 @@ button {
   color: #f4f4fd;
   width: 264px;
 }
+
+.footer-container-social {
+  margin-left: 120px;
+}
+
+.footer-Social-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+.icons-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.icon-footer {
+  fill: white;
+}
+
+.icon-lin-footer {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: blue;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-lin-footer:hover,
+.icon-lin-footer:focus {
+  background-color: #31d0aa;
+}
+
 /* #endregion footer */
